@@ -1,5 +1,5 @@
 ---
-name: ((deployment-name))
+name: test-cf-rabbitmq-smoke-tests-release-ci
 
 instance_groups:
 - azs:
