@@ -10,36 +10,9 @@ instance_groups:
   - name: ((network))
   stemcell: trusty
   vm_type: ((vm_type))
-  jobs:
-  - name: smoke-tests
-    release: cf-rabbitmq-smoke-tests
-    properties:
-      cf:
-        api_url: https://api.((system-domain))
-        domain: ((system-domain))
-        admin_username: ((cf-admin-username))
-        admin_password: ((cf-admin-password))
-      broker:
-        name: ((product-name))
-      smoke_tests:
-        org: system
-  - name: on-demand-broker-smoke-tests
-    release: cf-rabbitmq-smoke-tests
-    properties:
-      cf:
-        api_url: https://api.((system-domain))
-        admin_username: ((cf-admin-username))
-        admin_password: ((cf-admin-password))
-        org: system
-        plans:
-          - name: doesnt_matter
-        service_offering_name: dummy_offering
-      broker:
-        name: ((product-name))
+  jobs: []
 
-releases:
-- name: cf-rabbitmq-smoke-tests
-  version: latest
+releases: []
 
 stemcells:
 - alias: trusty
