@@ -12,7 +12,9 @@ instance_groups:
   vm_type: ((vm_type))
   jobs: []
 
-releases: []
+releases:
+- name: test-cf-rabbitmq-smoke-tests	
+  version: latest
 
 stemcells:
 - alias: trusty
